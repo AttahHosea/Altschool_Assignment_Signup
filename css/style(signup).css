@@ -267,3 +267,6 @@ body {
 .highlighted {
   border: 1px solid var(--cl-green, #2ec4b6);
 }
+.ffamily{
+  font-family: 'Sofia Pro'
+}
