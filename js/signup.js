@@ -1,12 +1,15 @@
+const togglePasswordButton = document.getElementById('togglePassword');
 const passwordInput = document.getElementById('password');
-const iconEye = document.querySelector('.bi-eye-fill');
+const passwordToggleIcon = document.getElementById('passwordToggleIcon');
 
-iconEye.addEventListener('click', () => {
+togglePasswordButton.addEventListener('click', function () {
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    iconEye.classList.add('bi-eye-slash');
+    passwordToggleIcon.classList.remove('bi-eye-fill');
+    passwordToggleIcon.classList.add('bi-eye-slash-fill');
   } else {
     passwordInput.type = 'password';
-    iconEye.classList.remove('bi-eye-slash');
+    passwordToggleIcon.classList.remove('bi-eye-slash-fill');
+    passwordToggleIcon.classList.add('bi-eye-fill');
   }
 });
